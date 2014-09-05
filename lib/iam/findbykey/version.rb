@@ -1,5 +1,5 @@
 module Iam
-  module Findbykey
+  module FindByKey
     VERSION = "1.0.1"
   end
 end

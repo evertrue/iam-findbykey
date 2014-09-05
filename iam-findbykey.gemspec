@@ -5,11 +5,10 @@ require 'iam/findbykey/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "iam-findbykey"
-  spec.version       = Iam::Findbykey::VERSION
+  spec.version       = Iam::FindByKey::VERSION
   spec.authors       = ["Eric Herot"]
   spec.email         = ["eric.herot@evertrue.com"]
   spec.summary       = %q{Find IAM Users by Key}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
   spec.homepage      = ""
   spec.license       = "MIT"
 
