@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'iam/findbykey/version'
+require 'iamfindbykey/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "iam-findbykey"
-  spec.version       = Iam::FindByKey::VERSION
+  spec.version       = EverTools::IamFindByKey::VERSION
   spec.authors       = ["Eric Herot"]
   spec.email         = ["eric.herot@evertrue.com"]
   spec.summary       = %q{Find IAM Users by Key}

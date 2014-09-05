@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require 'iam-findbykey'
+require 'iamfindbykey'
 
-i = Iam::FindByKey.new(ARGV)
+i = EverTools::IamFindByKey.new(ARGV)
 i.run

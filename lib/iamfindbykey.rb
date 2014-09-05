@@ -1,8 +1,8 @@
 require 'fog'
-require "iam/findbykey/version"
+require "iamfindbykey/version"
 
-module Iam
-  module FindByKey
+module EverTools
+  class IamFindByKey
 
     def initalize(args)
       @args = args
