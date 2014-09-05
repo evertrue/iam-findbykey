@@ -6,7 +6,7 @@ module EverTools
 
     def initialize(args)
       @args = args
-      @key = args[0]
+      @key = args[1]
     end
 
     def run
@@ -23,7 +23,7 @@ module EverTools
     end
 
     def user
-      connection.users.find { |u| u.user_id == @key }
+      @user ||= connection.users.find { |u| u.user_id == @key }
     end
 
     def connection
