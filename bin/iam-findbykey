@@ -1,5 +1,10 @@
 #!/usr/bin/env ruby
 
+if ARGV.empty?
+  puts "Usage: iam-findbykey ACCESS_KEY_ID"
+  exit 1
+end
+
 require 'iamfindbykey'
 
 i = EverTools::IamFindByKey.new(ARGV)
