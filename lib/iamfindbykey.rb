@@ -6,7 +6,7 @@ module EverTools
 
     def initialize(args)
       @args = args
-      @key = args[1]
+      @key = args[0]
     end
 
     def run
