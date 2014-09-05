@@ -4,7 +4,7 @@ require "iamfindbykey/version"
 module EverTools
   class IamFindByKey
 
-    def initalize(args)
+    def initialize(args)
       @args = args
       @key = args[0]
     end
@@ -23,7 +23,7 @@ module EverTools
     end
 
     def user
-      c.users.find { |u| u.user_id == @key }
+      connection.users.find { |u| u.user_id == @key }
     end
 
     def connection
