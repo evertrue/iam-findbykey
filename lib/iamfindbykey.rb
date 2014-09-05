@@ -23,7 +23,14 @@ module EverTools
     end
 
     def user
-      @user ||= connection.users.find { |u| u.user_id == @key }
+      @user ||= begin
+        r = connection.users.find { |u| u.user_id == @key }
+        if r.nil?
+          puts "Key #{@key} not found"
+          exit 1
+        end
+        r
+      end
     end
 
     def connection
