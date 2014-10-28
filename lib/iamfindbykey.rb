@@ -22,14 +22,24 @@ module EverTools
       puts "#{key}: #{value}"
     end
 
+    def keymap
+      @keymap ||= begin
+        connection.users.reduce({}) do |m, user|
+          connection.list_access_keys('UserName' => user)
+            .body['AccessKeys']
+            .map { |ak| ak['AccessKeyId'] }
+            .each { |ak| m[ak] = user }
+        end
+      end
+    end
+
     def user
       @user ||= begin
-        r = connection.users.find { |u| u.user_id == @key }
-        if r.nil?
+        unless keymap[@key]
           puts "Key #{@key} not found"
           exit 1
         end
-        r
+        connection.users.get(keymap[@key])
       end
     end
 
